@@ -31,6 +31,35 @@ const aac = ["parser-aac", "codec-aac"];
 const h264 = ["parser-h264", "decoder-h264", "codec-libopenh264"];
 const hevc = ["parser-hevc", "decoder-hevc"];
 
+// Demux and mux list
+// removed "format-hls" since I don't need to mux it
+const formats = ["format-mp4", "format-webm", "format-matroska", "format-avi"];
+
+// demuxer-3gp not need, included in -mov | demuxer-mpeg doesn't match anything, changed to demuxer-mpegps, nor does demuxer-ipod (it's only a muxer for m4a)
+// removed demuxer-dash as we also need to include libxml2 and we aren't going to receive any streams over http to demux
+// Demuxers list
+const dmux = ["demuxer-asf","demuxer-flv","demuxer-hls","demuxer-mov","demuxer-mp4","demuxer-mpegts", "demuxer-mpegps", "demuxer-rawvideo","demuxer-ogg","demuxer-matroska", "demuxer-avi", "demuxer-webm","demuxer-dhav", "demuxer-dv", "demuxer-m4v", "parser-mpegvideo"];
+
+// Video Decoders and parsers list
+const vdecpar = ["parser-vp8","parser-vp9","parser-av1","parser-h264","parser-hevc","bsf-extract_extradata","bsf-vp9_metadata","bsf-av1_metadata","bsf-h264_metadata","bsf-hevc_metadata", "decoder-cinepak", "decoder-dvvideo", "decoder-flv","decoder-h261","parser-h261", "decoder-h263", "parser-h263", "decoder-h263i", "decoder-h263p", "decoder-mpeg1video", "decoder-mpeg2video","bsf-mpeg2_metadata", "decoder-mpegvideo","parser-mpegvideo", "decoder-mpeg4","bsf-mpeg4_unpack_bframes", "parser-mpeg4video", "decoder-msmpeg4v1","decoder-msmpeg4v2","decoder-msmpeg4v3", "decoder-msvideo1", "decoder-prores", "decoder-rawvideo", "decoder-theora", "decoder-vp6", "parser-vc1","parser-vp3", "decoder-wmv1", "decoder-wmv2", "decoder-wmv3"];
+
+// Audio Decoders and parsers list
+const adecpar = ["parser-ftr","parser-adx","parser-mlp","format-aac","parser-aac", "parser-aac_latm", "codec-aac", "parser-opus", "codec-libopus", "format-flac", "parser-flac", "codec-flac", "format-mp3","decoder-mp3", "format-pcm_f32le", "codec-pcm_f32le","codec-prores", "codec-qtrle", "format-wav", "codec-libvorbis", "codec-alac", "decoder-ac3", "parser-ac3","decoder-dolby_e","parser-dolby_e", "decoder-eac3","bsf-eac3_core", "decoder-dvaudio","parser-dvaudio","decoder-dca", "parser-dca","bsf-dca_core","bsf-dovi_rpu","bsf-truehd_core", "decoder-mp1","parser-mpegaudio", "decoder-mp2", "decoder-pcm_dvd", "decoder-pcm_bluray", "decoder-pcm_s16le", "decoder-pcm_s24le", "decoder-wmav1","decoder-wmav2","decoder-wmapro","decoder-wmavoice","parser-xma",];
+
+// Video encoders list
+// removed "encoder-h263" and "encoder-h263p", both in favor of "codec-mpeg4" to encode H.263 with mpeg4 in the form of DivX
+// removed "codec-vnull"
+const videnc = ["codec-mpeg4"];
+
+// Audio encoders list
+//const audenc = ["codec-anull"];
+
+// Muxers list
+const mux = ["muxer-ipod"];
+
+// Filters list
+const avfilt = ["audio-filters", "video-filters", "protocol-jsfetch"];
+
 const configsRaw = [
     // Audio sensible:
     ["default", [
@@ -111,6 +140,12 @@ const configsRaw = [
 
         // HLS
         "format-hls", "protocol-jsfetch"
+    ]],
+
+    // The set of options for Sink
+    ["sink", [
+        "swscale",
+        formats, dmux, mux, vdecpar, adecpar, videnc, avfilt
     ]],
 
     ["empty", []],

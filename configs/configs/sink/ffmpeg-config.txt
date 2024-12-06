@@ -1,0 +1,148 @@
+--enable-protocol=data --enable-protocol=file
+--enable-filter=aresample
+--enable-filter=scale
+--enable-demuxer=mov
+--enable-muxer=ipod
+--enable-muxer=mov
+--enable-muxer=mp4
+--enable-demuxer=matroska
+--enable-muxer=matroska --enable-muxer=webm
+--enable-demuxer=matroska
+--enable-muxer=matroska
+--enable-demuxer=avi
+--enable-muxer=avi
+--enable-demuxer=asf
+--enable-demuxer=flv
+--enable-demuxer=hls
+--enable-demuxer=mov
+--enable-demuxer=mov
+--enable-demuxer=mpegts
+--enable-demuxer=mpegps
+--enable-demuxer=rawvideo
+--enable-demuxer=ogg
+--enable-demuxer=matroska
+--enable-demuxer=avi
+--enable-demuxer=matroska
+--enable-demuxer=dhav
+--enable-demuxer=dv
+--enable-demuxer=m4v
+--enable-parser=mpegvideo
+--enable-muxer=ipod
+--enable-parser=vp8
+--enable-parser=vp9
+--enable-parser=av1
+--enable-parser=h264
+--enable-parser=hevc
+--enable-bsf=extract_extradata
+--enable-bsf=vp9_metadata
+--enable-bsf=av1_metadata
+--enable-bsf=h264_metadata
+--enable-bsf=hevc_metadata
+--enable-decoder=cinepak
+--enable-decoder=dvvideo
+--enable-decoder=flv
+--enable-decoder=h261
+--enable-parser=h261
+--enable-decoder=h263
+--enable-parser=h263
+--enable-decoder=h263i
+--enable-decoder=h263p
+--enable-decoder=mpeg1video
+--enable-decoder=mpeg2video
+--enable-bsf=mpeg2_metadata
+--enable-decoder=mpegvideo
+--enable-parser=mpegvideo
+--enable-decoder=mpeg4
+--enable-bsf=mpeg4_unpack_bframes
+--enable-parser=mpeg4video
+--enable-decoder=msmpeg4v1
+--enable-decoder=msmpeg4v2
+--enable-decoder=msmpeg4v3
+--enable-decoder=msvideo1
+--enable-decoder=prores
+--enable-bsf=prores_metadata
+--enable-decoder=rawvideo
+--enable-decoder=theora
+--enable-decoder=vp6
+--enable-parser=vc1
+--enable-parser=vp3
+--enable-decoder=wmv1
+--enable-decoder=wmv2
+--enable-decoder=wmv3
+--enable-parser=ftr
+--enable-parser=adx
+--enable-parser=mlp
+--enable-demuxer=aac
+--enable-parser=aac
+--enable-parser=aac_latm
+--enable-decoder=aac
+--enable-encoder=aac
+--enable-parser=opus
+--enable-libopus
+--enable-decoder=libopus
+--enable-bsf=opus_metadata
+--enable-encoder=libopus
+--enable-demuxer=flac
+--enable-muxer=flac
+--enable-parser=flac
+--enable-decoder=flac
+--enable-encoder=flac
+--enable-demuxer=mp3
+--enable-muxer=mp3
+--enable-decoder=mp3
+--enable-demuxer=pcm_f32le
+--enable-muxer=pcm_f32le
+--enable-decoder=pcm_f32le
+--enable-encoder=pcm_f32le
+--enable-decoder=prores
+--enable-bsf=prores_metadata
+--enable-encoder=prores
+--enable-decoder=qtrle
+--enable-encoder=qtrle
+--enable-decoder=pcm_s16le --enable-decoder=pcm_s24le
+--enable-demuxer=wav
+--enable-encoder=pcm_s16le --enable-encoder=pcm_s24le
+--enable-muxer=wav
+--enable-libvorbis
+--enable-decoder=libvorbis
+--enable-encoder=libvorbis
+--enable-decoder=alac
+--enable-encoder=alac
+--enable-decoder=ac3
+--enable-parser=ac3
+--enable-decoder=dolby_e
+--enable-parser=dolby_e
+--enable-decoder=eac3
+--enable-bsf=eac3_core
+--enable-decoder=dvaudio
+--enable-parser=dvaudio
+--enable-decoder=dca
+--enable-parser=dca
+--enable-bsf=dca_core
+--enable-bsf=dovi_rpu
+--enable-bsf=truehd_core
+--enable-decoder=mp1
+--enable-parser=mpegaudio
+--enable-decoder=mp2
+--enable-decoder=pcm_dvd
+--enable-decoder=pcm_bluray
+--enable-decoder=pcm_s16le
+--enable-decoder=pcm_s24le
+--enable-decoder=wmav1
+--enable-decoder=wmav2
+--enable-decoder=wmapro
+--enable-decoder=wmavoice
+--enable-parser=xma
+--enable-decoder=mpeg4
+--enable-encoder=mpeg4
+--enable-filter=acompressor --enable-filter=adeclick --enable-filter=adeclip
+--enable-filter=aecho --enable-filter=afade --enable-filter=aformat
+--enable-filter=agate --enable-filter=alimiter --enable-filter=amix
+--enable-filter=apad --enable-filter=asettb --enable-filter=asplit
+--enable-filter=atempo --enable-filter=atrim --enable-filter=bandpass
+--enable-filter=bandreject --enable-filter=dynaudnorm --enable-filter=equalizer
+--enable-filter=loudnorm --enable-filter=pan --enable-filter=amix
+--enable-filter=volume --enable-filter=anull
+--enable-filter=crop --enable-filter=fps --enable-filter=null
+--enable-filter=settb --enable-filter=split --enable-filter=trim
+--enable-protocol=jsfetch
