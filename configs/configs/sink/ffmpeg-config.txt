@@ -135,6 +135,8 @@
 --enable-parser=xma
 --enable-decoder=mpeg4
 --enable-encoder=mpeg4
+--enable-libmp3lame
+--enable-encoder=libmp3lame
 --enable-filter=acompressor --enable-filter=adeclick --enable-filter=adeclip
 --enable-filter=aecho --enable-filter=afade --enable-filter=aformat
 --enable-filter=agate --enable-filter=alimiter --enable-filter=amix
@@ -146,3 +148,4 @@
 --enable-filter=crop --enable-filter=fps --enable-filter=null
 --enable-filter=settb --enable-filter=split --enable-filter=trim
 --enable-protocol=jsfetch
+--enable-ffmpeg --enable-ffprobe
