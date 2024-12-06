@@ -18,6 +18,8 @@
 const mp4 = ["libopenh264", "aac"];
 const formatCodecs = {
     "adts": [null, null],
+    "avi": ["mpeg4", "libmp3lame"],
+    //"divx": ["xvid", "ac3"]
     "f32le": [null, "pcm_f32le", {nocheck: true}],
     "flac": [null, "flac"],
     "hls": [null, null],
@@ -80,7 +82,7 @@ const encoders = await (async function() {
         else if (parts[1][0] === "A")
             ret.audio.push(parts[2]);
     }
-
+    console.error(ret);
     return ret;
 })();
 
@@ -112,7 +114,7 @@ const formats = await (async function() {
             ret.push(parts[3]);
         }
     }
-
+    console.error(ret);
     return ret;
 })();
 
