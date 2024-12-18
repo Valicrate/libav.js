@@ -28,6 +28,7 @@
 --enable-demuxer=m4v
 --enable-parser=mpegvideo
 --enable-muxer=ipod
+--enable-bsf=chomp
 --enable-parser=vp8
 --enable-parser=vp9
 --enable-parser=av1
@@ -54,12 +55,18 @@
 --enable-parser=mpegvideo
 --enable-decoder=mpeg4
 --enable-bsf=mpeg4_unpack_bframes
+--enable-bsf=h264_mp4toannexb
+--enable-bsf=hevc_mp4toannexb
+--enable-bsf=h264_redundant_pps
+--enable-bsf=null
+--enable-bsf=setts
 --enable-parser=mpeg4video
 --enable-decoder=msmpeg4v1
 --enable-decoder=msmpeg4v2
 --enable-decoder=msmpeg4v3
 --enable-decoder=msvideo1
 --enable-decoder=prores
+--enable-bsf=prores_metadata
 --enable-bsf=prores_metadata
 --enable-decoder=rawvideo
 --enable-decoder=theora
@@ -75,6 +82,7 @@
 --enable-demuxer=aac
 --enable-parser=aac
 --enable-parser=aac_latm
+--enable-bsf=aac_adtstoasc
 --enable-decoder=aac
 --enable-encoder=aac
 --enable-parser=opus

@@ -7,8 +7,8 @@
   "types": "dist/libav.types.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/libav-default.mjs",
-      "default": "./dist/libav-default.js",
+      "import": "./dist/libav-sink.mjs",
+      "default": "./dist/libav-sink.js",
       "types": "./dist/libav.types.d.ts"
     },
     "./default": {
@@ -84,6 +84,11 @@
     "./webcodecs-avf": {
       "import": "./dist/libav-webcodecs-avf.mjs",
       "default": "./dist/libav-webcodecs-avf.js",
+      "types": "./dist/libav.types.d.ts"
+    },
+    "./sink": {
+      "import": "./dist/libav-sink.mjs",
+      "default": "./dist/libav-sink.js",
       "types": "./dist/libav.types.d.ts"
     }
   },
