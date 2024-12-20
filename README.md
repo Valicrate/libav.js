@@ -50,7 +50,7 @@ example of using libav.js from a CDN in the browser thread:
 <!doctype html>
 <html>
     <body>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@libav.js/variant-default@6.4.7/dist/libav-6.4.7.1-default.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@libav.js/variant-default@6.5.7/dist/libav-6.5.7.1-default.js"></script>
         <script type="text/javascript">(async function() {
             const libav = await LibAV.LibAV({noworker: true});
             await libav.writeFile("tmp.opus", new Uint8Array(
@@ -73,7 +73,7 @@ Here's a better example, using libav.js locally:
 <!doctype html>
 <html>
     <body>
-        <script type="text/javascript" src="libav-6.4.7.1-default.js"></script>
+        <script type="text/javascript" src="libav-6.5.7.1-default.js"></script>
         <script type="text/javascript">(async function() {
             const libav = await LibAV.LibAV();
             await libav.writeFile("tmp.opus", new Uint8Array(
@@ -161,7 +161,10 @@ released version, it is sufficient to provide the `sources` directory.
 
 libav.js is published to NPM as `libav.js`, and each released variant is
 published in a much smaller NPM package as `@libav.js/variant-<variant>`. The
-CDN example above uses the `@libav.js/variant-default` package, for example.
+CDN example above uses the `@libav.js/variant-default` package, for example. The
+`@libav.js/types` package is also provided with only the types (`.d.ts` file),
+and if using TypeScript, you are highly recommended to use it, to avoid bringing
+entire variants in as dependencies of your own packages.
 
 ### Why the version number in the filenames?
 
